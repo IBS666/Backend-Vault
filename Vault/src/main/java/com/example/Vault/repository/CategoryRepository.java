@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
-    Optional<Category> findByCatName(String catName);
-    boolean existsByCatName(String catName);
+    Optional<Category> findByCatName(String catName);//shows the details of that catName
+    boolean existsByCatName(String catName);// tells us id a catName exist or not
 }

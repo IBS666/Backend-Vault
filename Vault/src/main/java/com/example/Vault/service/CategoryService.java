@@ -7,12 +7,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
-@Transactional
+@Service          //@Service → Marks this as a Spring service, part of the business layer.
+@Transactional    //@Transactional→ Every method runs in a transaction: if something fails, changes are rolled back.
+    
 public class CategoryService {
 
     private final CategoryRepository categoryRepository;
-
+    
+    //Injects CategoryRepository → interacts with the database for categories.
+    
     public CategoryService(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
